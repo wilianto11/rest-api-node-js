@@ -11,7 +11,7 @@ app.use(express.json());
 app.get("/users", ServiceUser.tokenValidation, ServiceUser.getUsers);
 app.post("/users", ServiceUser.createUsers);
 app.put("/users/:id", ServiceUser.tokenValidation, ServiceUser.updateUsers);
-app.delete("/users/:id", ServiceUser.deleteUsers);
+app.delete("/users/:id", ServiceUser.tokenValidation, ServiceUser.deleteUsers);
 app.post("/login", ServiceUser.login);
 
 //Product
