@@ -38,130 +38,132 @@ JWT_SECRET=your_jwt_secret
 Mulai server:
 
 ```bash
-npm start
-Server akan berjalan di http://localhost:8080.
+node index.js
 ```
+Server akan berjalan di http://localhost:8080.
 
-Endpoint API
-Endpoint Pengguna
-Dapatkan Semua Pengguna
+## Endpoint API
+### Endpoint Pengguna
+- Dapatkan Semua Pengguna
 
-http
-Copy code
+```bash
 GET /users
+```
 Membutuhkan validasi token JWT.
 
-Buat Pengguna
+- Buat Pengguna
 
-http
-Copy code
+```bash
 POST /users
+```
 Contoh Body Permintaan:
 
-json
-Copy code
+```bash
 {
   "username": "string",
   "password": "string"
 }
-Perbarui Pengguna
+```
 
-http
-Copy code
+- Perbarui Pengguna
+
+```bash
 PUT /users/:id
+```
 Membutuhkan validasi token JWT.
 
 Contoh Body Permintaan:
 
-json
-Copy code
+```bash
 {
   "username": "string"
 }
-Hapus Pengguna
+```
+- Hapus Pengguna
 
-http
-Copy code
+```bash
 DELETE /users/:id
+```
 Membutuhkan validasi token JWT.
 
-Login Pengguna
+- Login Pengguna
 
-http
-Copy code
+```bash
 POST /login
+```
 Contoh Body Permintaan:
 
-json
-Copy code
+```bash
 {
   "username": "string",
   "password": "string"
 }
+```
 Contoh Respon:
 
-json
-Copy code
+
+```bash
 {
   "token": "jwt_token"
 }
-Endpoint Produk
-Dapatkan Semua Produk
+```
 
-http
-Copy code
+### Endpoint Produk
+- Dapatkan Semua Produk
+
+```bash
 GET /product
+```
 Membutuhkan validasi token JWT.
 
-Buat Produk
+- Buat Produk
 
-http
-Copy code
+```bash
 POST /product
+```
 Membutuhkan validasi token JWT.
 
 Contoh Body Permintaan:
 
-json
-Copy code
+```bash
 {
   "name": "string",
   "price": "number",
   "description": "string"
 }
-Perbarui Produk
+```
+- Perbarui Produk
 
-http
-Copy code
+```bash
 PUT /product/:id
+```
 Membutuhkan validasi token JWT.
 
 Contoh Body Permintaan:
 
-json
-Copy code
+```bash
 {
   "name": "string",
   "price": "number",
   "description": "string"
 }
-Hapus Produk
+```
+- Hapus Produk
 
-http
-Copy code
+```bash
 DELETE /product/:id
+```
 Membutuhkan validasi token JWT.
 
-Middleware
+## Middleware
 Middleware Validasi Token: Digunakan untuk melindungi rute yang memerlukan autentikasi.
 
-javascript
-Copy code
+```bash
 app.use(ServiceUser.tokenValidation);
-Lisensi
-Proyek ini dilisensikan di bawah Lisensi MIT - lihat file LICENSE untuk detailnya.
+```
 
-Penghargaan
-Express.js
-Node.js
-JWT
+
+## Acknowledgements
+- [Express.js](https://expressjs.com/): Framework web Node.js yang minimalis dan fleksibel.
+- [Node.js](https://nodejs.org/): Runtime JavaScript yang dibangun di atas Chrome's V8 JavaScript engine.
+- [JWT](https://jwt.io/): JSON Web Token, standar industri untuk mentransfer klaim antara pihak yang terpercaya.
