@@ -37,10 +37,10 @@ JWT_SECRET=your_jwt_secret
 ### Menjalankan Server
 Mulai server:
 
-    ```bash
-    npm start
-    Server akan berjalan di http://localhost:8080.
-    ```
+```bash
+npm start
+Server akan berjalan di http://localhost:8080.
+```
 
 Endpoint API
 Endpoint Pengguna
