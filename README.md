@@ -32,13 +32,15 @@ Buat file `.env` di direktori root dan konfigurasikan variabel lingkungan beriku
 PORT=8080
 HOST=localhost
 JWT_SECRET=your_jwt_secret
-Menjalankan Server
+ ```
+
+### Menjalankan Server
 Mulai server:
 
-bash
-Copy code
-npm start
-Server akan berjalan di http://localhost:8080.
+    ```bash
+    npm start
+    Server akan berjalan di http://localhost:8080.
+    ```
 
 Endpoint API
 Endpoint Pengguna
